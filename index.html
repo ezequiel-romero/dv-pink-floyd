@@ -7,19 +7,21 @@
   <title>Pink Floyd | Homepage</title>
   <link rel="stylesheet" href="https://use.typekit.net/prx1ifg.css">
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Animate on scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/e0873b9799.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo" title="Logo de Pink Floyd"><h1>Pink Floyd</h1></a>
-    <nav>
-      <h2 class="hidden">Links del sitio</h2>
+    <nav class="desktop-nav">
+      <h2 class="hidden">Menu Desktop</h2>
       <ul>
-        <li><a href="#shop">Tienda</a></li>
+        <li><a class="active" href="#">Home</a></li>
         <li><a href="discography.html">Discografía</a></li>
-        <li><a href="#tour">Tour</a></li>
-        <li><a href="#history">Historia</a></li>
+        <li><a href="giveaway.html">Sorteo</a></li>
       </ul>
     </nav>
     <div class="social">
@@ -29,6 +31,19 @@
         <li><a href="https://www.facebook.com/" target="_blank" class="fb" title="Cuenta de Facebook">Facebook</a></li>
         <li><a href="https://www.youtube.com/" target="_blank" class="yt" title="Cuenta de YouTube">YouTube</a></li>
       </ul>
+    </div>
+    <div class="mobile-menu">
+      <nav id="mobile-nav">
+        <h2 class="hidden">Menu Mobile</h2>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="discography.html">Discografía</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0);" class="icon" onClick="toggleMenu()">
+        <i id="menu-icon" class="fa fa-bars"></i>
+      </a>
     </div>
   </header>
   <main>
@@ -43,7 +58,7 @@
     data-aos-easing="ease-in-back"
     data-aos-delay="200">
       <h2>Shop</h2>
-      <p>¡<b>Encuentra tus productos favoritos de Pink Floyd</b> en nuestra tienda oficial! Merchandising exclusivo, vinilos, camisetas y más, todo para los verdaderos amantes de la banda.</p>
+      <p>¡<b>Encuentra tus productos favoritos de Pink Floyd</b> en nuestra tienda oficial! Merchandising exclusivo, vinilos, camisetas y más, todo para los verdaderos amantes de la banda.</p>
       <div class="product-gallery">
         <div class="product-card">
           <img src="images/products/product_remera.png" alt="Remera de Pink Floyd">
@@ -53,7 +68,7 @@
             <a href="#" class="icon bag">Comprar</a>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card hide-on-small">
           <img src="images/products/product_boxset.png" alt="Box set The Dark Side of the Moon">
           <div class="product-card-footer">
             <a href="#" class="icon favs">Agregar a Favoritos</a>
@@ -61,7 +76,7 @@
             <a href="#" class="icon bag">Comprar</a>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card hide-on-small">
           <img src="images/products/product_gorra.png" alt="Gorra de Pink Floyd">
           <div class="product-card-footer">
             <a href="#" class="icon favs">Agregar a Favoritos</a>
@@ -69,7 +84,7 @@
             <a href="#" class="icon bag">Comprar</a>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card hide-on-medium">
           <img src="images/products/product_campera.png" alt="Campera de Pink Floyd">
           <div class="product-card-footer">
             <a href="#" class="icon favs">Agregar a Favoritos</a>
@@ -77,7 +92,7 @@
             <a href="#" class="icon bag">Comprar</a>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card hide-on-medium">
           <img src="images/products/product_poster.png" alt="Póster de Pink Floyd">
           <div class="product-card-footer">
             <a href="#" class="icon favs">Agregar a Favoritos</a>
@@ -85,7 +100,7 @@
             <a href="#" class="icon bag">Comprar</a>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card hide-on-medium">
           <img src="images/products/product_vinilo.png" alt="Vinilo de Pink Floyd">
           <div class="product-card-footer">
             <a href="#" class="icon favs">Agregar a Favoritos</a>
@@ -103,7 +118,7 @@
     data-aos-delay="200">
       <div class="section-copy">
         <h2>Discografía</h2>
-        <p><b>Explora la evolución sonora de Pink Floyd</b> a través de su discografía icónica: desde los psicodélicos inicios de <span lang="en" title="El flautista a las puertas del alba">'The Piper at the Gates of Dawn'</span> hasta los majestuosos paisajes sonoros de <span lang="en" title="El muro">'The Wall'</span> y más allá.</p>
+        <p><b>Explora la evolución sonora de Pink Floyd</b> a través de su discografía icónica: desde los psicodélicos inicios de <em lang="en">'The Piper at the Gates of Dawn'</em> hasta los majestuosos paisajes sonoros de <em lang="en">'The Wall'</em> y más allá.</p>
         <div class="icons">
           <ul>
             <li><a href="https://music.apple.com/" target="_blank" class="am" title="Reproducir en Apple Music">Reproducir en Apple Music</a></li>
@@ -114,7 +129,8 @@
         <a href="discography.html" class="btn">Ver discografía</a>
       </div>
       <div class="section-image">
-        <img src="images/discography/discography-img.png" alt="Discografía de Pink Floyd">
+        <img class="hide-on-small" src="images/discography/discography_large.png" alt="Discografía de Pink Floyd">
+        <img class="show-only-on-small" src="images/discography/discography_small.png" alt="Discografía de Pink Floyd">
       </div>
     </section>
     <section id="tour"
@@ -123,9 +139,9 @@
     data-aos-easing="ease-in-back"
     data-aos-delay="200">
       <div>
-        <div class="tour-dates">
-          <h2 class="hidden">Siguientes fechas</h2>
-          <div class="tour-date">
+        <h2 class="hidden">Siguientes fechas</h2>
+        <ul class="tour-dates">
+          <li class="tour-date">
             <div>
               <img src="images/tour/tour-1.jpg" alt="Póster de Pink Floyd en Campo Argentino de Polo">
             </div>
@@ -135,13 +151,13 @@
             </div>
             <div class="tour-date-info">
               <p>Campo Argentino de Polo</p>
-              <p>Ciudad Autónoma de Buenos Aires</p>
+              <p>CABA</p>
             </div>
             <div>
               <a href="#" class="btn">Ver</a>
             </div>
-          </div>
-          <div class="tour-date">
+          </li>
+          <li class="tour-date">
             <div>
               <img src="images/tour/tour-2.jpg" alt="Póster de Pink Floyd en Movistar Arena">
             </div>
@@ -151,13 +167,13 @@
             </div>
             <div class="tour-date-info">
               <p>Movistar Arena</p>
-              <p>Ciudad Autónoma de Buenos Aires</p>
+              <p>CABA</p>
             </div>
             <div>
               <a href="#" class="btn">Ver</a>
             </div>
-          </div>
-          <div class="tour-date">
+          </li>
+          <li class="tour-date">
             <div>
               <img src="images/tour/tour-3.jpg" alt="Póster de Pink Floyd en Luna Park">
             </div>
@@ -167,13 +183,13 @@
             </div>
             <div class="tour-date-info">
               <p>Luna Park</p>
-              <p>Ciudad Autónoma de Buenos Aires</p>
+              <p>CABA</p>
             </div>
             <div>
               <a href="#" class="btn">Ver</a>
             </div>
-          </div>
-          <div class="tour-date">
+          </li>
+          <li class="tour-date">
             <div>
               <img src="images/tour/tour-4.jpg" alt="Póster de Pink Floyd en Teatro Gran Rex">
             </div>
@@ -183,13 +199,13 @@
             </div>
             <div class="tour-date-info">
               <p>Teatro Gran Rex</p>
-              <p>Ciudad Autónoma de Buenos Aires</p>
+              <p>CABA</p>
             </div>
             <div>
               <a href="#" class="btn">Ver</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="section-copy">
         <h2>Tour</h2>
@@ -204,11 +220,12 @@
     data-aos-delay="200">
       <div class="section-copy">
         <h2>Historia</h2>
-        <p>Pink Floyd, formada en Londres en 1965, comenzó como una banda <b>psicodélica</b> liderada por <b>Syd Barrett</b>. Tras la salida de Barrett en 1968, <b>David Gilmour</b> se unió, marcando una transición hacia el <b>rock progresivo</b>. La era de <b>Roger Waters</b> (1980-1983) vio la publicación de <span lang="en" title="El corte final">"The Final Cut"</span> con temas políticos y personales. Luego, la era de  (1987-1994) trajo álbumes como <span lang="en" title="Un lapso momentáneo de razón">"A Momentary Lapse of Reason"</span> y <span lang="en" title="La campana de división">"The Division Bell"</span>, con un sonido más contemporáneo y colaborativo. Pink Floyd es famosa por álbumes conceptuales como <span lang="en" title="El lado oscuro de la luna">"The Dark Side of the Moon"</span> y <span lang="en" title="El Muro">"The Wall"</span>. Su influencia perdura como <em>una de las bandas más icónicas de la historia del rock</em>.</p>
+        <p>Pink Floyd, formada en Londres en 1965, comenzó como una banda <b>psicodélica</b> liderada por <b>Syd Barrett</b>. Tras la salida de Barrett en 1968, <b>David Gilmour</b> se unió, marcando una transición hacia el <b>rock progresivo</b>. La era de <b>Roger Waters</b> (1980-1983) vio la publicación de <em lang="en">"The Final Cut"</em> con temas políticos y personales. Luego, la era de  (1987-1994) trajo álbumes como <em lang="en">"A Momentary Lapse of Reason"</em> y <em lang="en">"The Division Bell"</em>, con un sonido más contemporáneo y colaborativo. Pink Floyd es famosa por álbumes conceptuales como <em lang="en">"The Dark Side of the Moon"</em> y <em lang="en">"The Wall"</em>. Su influencia perdura como <em>una de las bandas más icónicas de la historia del rock</em>.</p>
         <a href="#" class="btn">Ver más</a>
       </div>
       <div class="section-image">
-        <img src="images/history/band.png" alt="Imágen de la Banda Pink Floyd">
+        <img class="hide-on-small" src="images/history/band.png" alt="Imagen de la Banda Pink Floyd">
+        <img class="show-only-on-small" src="images/history/band_small.png" alt="Imagen de la Banda Pink Floyd">
       </div>
     </section>
   </main>
@@ -227,7 +244,7 @@
               <input type="email" name="email" id="email" placeholder="Correo electrónico">
             </div>
             <div>
-              <input id="subscribe" class="btn" type="submit" name="subscribe">
+              <input id="subscribe" class="btn" type="submit" name="subscribe" value="Suscribirme">
             </div>
           </form>
         </div>
@@ -238,10 +255,9 @@
       <div class="footer-nav">
         <h3 class="footer-title">Links del sitio</h3>
         <ul>
-          <li><a href="#shop">Tienda</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="discography.html">Discografía</a></li>
-          <li><a href="#tour">Tour</a></li>
-          <li><a href="#history">Historia</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -274,15 +290,32 @@
       </div>
     </div>
     <div class="tp-info">
-      <div>
-        <h3 class="hidden">Datos del alumno y la materia</h3>
-        <p>Desarrollo por <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Cesar Ezequiel Romero</a> para la materia Maquetado y Desarrollo Web a cargo de la docente <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Mabel Garcia</a>.</p>
-        <p>TP2 Primer Cuatrimestre · Escuela Da Vinci 2023</p>
-      </div>
+      <ul>
+        <li class="hidden"><h3>Datos del alumno y la materia</h3></li>
+        <li>Diseño y Desarrollo por <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Cesar Ezequiel Romero</a></li>
+        <li>Docente <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Mabel Garcia</a></li>
+        <li>Trabajo Final Maquetado y Desarrollo Web</li>
+        <li>Primer Cuatrimestre</li>
+        <li>Escuela Da Vinci 2023</li>
+      </ul>
     </div>
   </footer>
   <script>
     document.getElementById('subscribe').addEventListener('click',(event)=>{event.preventDefault()})
+
+    function toggleMenu() {
+      let mobileNav = document.getElementById("mobile-nav");
+      let menuIcon = document.getElementById("menu-icon");
+      if (mobileNav.style.display === "block") {
+        mobileNav.style.display = "none";
+        menuIcon.classList.remove('fa-xmark')
+        menuIcon.classList.add('fa-bars')
+      } else {
+        mobileNav.style.display = "block";
+        menuIcon.classList.remove('fa-bars')
+        menuIcon.classList.add('fa-xmark')
+      }
+    }
     
     AOS.init();
   </script>

@@ -7,17 +7,18 @@
   <title>Pink Floyd | Discografía</title>
   <link rel="stylesheet" href="https://use.typekit.net/prx1ifg.css">
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/e0873b9799.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo" title="Logo de Pink Floyd"><h1>Pink Floyd</h1></a>
-    <nav>
-      <h2 class="hidden">Links del sitio</h2>
+    <nav class="desktop-nav">
+      <h2 class="hidden">Menu Desktop</h2>
       <ul>
-        <li><a href="index.html#shop">Tienda</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a class="active" href="#">Discografía</a></li>
-        <li><a href="index.html#tour">Tour</a></li>
-        <li><a href="index.html#history">Historia</a></li>
+        <li><a href="giveaway.html">Sorteo</a></li>
       </ul>
     </nav>
     <div class="social">
@@ -28,13 +29,28 @@
         <li><a href="https://www.youtube.com/" target="_blank" class="yt" title="Cuenta de YouTube">YouTube</a></li>
       </ul>
     </div>
+    <div class="mobile-menu">
+      <nav id="mobile-nav">
+        <h2 class="hidden">Menu Mobile</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="#">Discografía</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0);" class="icon" onClick="toggleMenu()">
+        <i id="menu-icon" class="fa fa-bars"></i>
+      </a>
+    </div>
   </header>
   <main>
     <section id="discography-album-covers">
       <h2>Discografía</h2>
       <ul class="tabs">
         <li id="defaultOpen" class="tabs-link active" onclick="openAlbum(event, 'ummaguma')">
-          <img src="images/discography/albums/ummaguma.jpg" alt="Tapa del disco Ummaguma">
+          <img class="show-only-on-large" src="images/discography/albums/ummaguma.jpg" alt="Tapa del disco Ummaguma">
+          <img class="show-only-on-medium" src="images/discography/albums/ummaguma_medium.jpg" alt="Tapa del disco Ummaguma">
+          <img class="show-only-on-small" src="images/discography/albums/ummaguma_small.jpg" alt="Tapa del disco Ummaguma">
           <div>
             <h3>Ummaguma</h3>
             <p>1969 - Rock Psicodélico</p>
@@ -42,7 +58,9 @@
           </div>
         </li>
         <li class="tabs-link" onclick="openAlbum(event, 'the_dark_side_of_the_moon')">
-          <img src="images/discography/albums/the_dark_side_of_the_moon.jpg" alt="Tapa del disco The Dark Side of The Moon">
+          <img class="show-only-on-large" src="images/discography/albums/the_dark_side_of_the_moon.jpg" alt="Tapa del disco The Dark Side of The Moon">
+          <img class="show-only-on-medium" src="images/discography/albums/the_dark_side_of_the_moon_medium.jpg" alt="Tapa del disco The Dark Side of The Moon">
+          <img class="show-only-on-small" src="images/discography/albums/the_dark_side_of_the_moon_small.jpg" alt="Tapa del disco The Dark Side of The Moon">
           <div>
             <h3>The Dark Side of The Moon</h3>
             <p>1973 - Rock Progresivo</p>
@@ -50,7 +68,9 @@
           </div>
         </li>
         <li class="tabs-link" onclick="openAlbum(event, 'wish_you_were_here')">
-          <img src="images/discography/albums/wish_you_were_here.jpg" alt="Tapa del disco Wish You Were Here">
+          <img class="show-only-on-large" src="images/discography/albums/wish_you_were_here.jpg" alt="Tapa del disco Wish You Were Here">
+          <img class="show-only-on-medium" src="images/discography/albums/wish_you_were_here_medium.jpg" alt="Tapa del disco Wish You Were Here">
+          <img class="show-only-on-small" src="images/discography/albums/wish_you_were_here_small.jpg" alt="Tapa del disco Wish You Were Here">
           <div>
             <h3>Wish You Were Here</h3>
             <p>1975 - Rock Progresivo / Rock Experimental</p>
@@ -58,7 +78,9 @@
           </div>
         </li>
         <li class="tabs-link" onclick="openAlbum(event, 'animals')">
-          <img src="images/discography/albums/animals.jpg" alt="Tapa del disco Animals">
+          <img class="show-only-on-large" src="images/discography/albums/animals.jpg" alt="Tapa del disco Animals">
+          <img class="show-only-on-medium" src="images/discography/albums/animals_medium.jpg" alt="Tapa del disco Animals">
+          <img class="show-only-on-small" src="images/discography/albums/animals_small.jpg" alt="Tapa del disco Animals">
           <div>
             <h3>Animals</h3>
             <p>1977 - Rock Progresivo</p>
@@ -66,7 +88,9 @@
           </div>
         </li>
         <li class="tabs-link" onclick="openAlbum(event, 'the_wall')">
-          <img src="images/discography/albums/the_wall.jpg" alt="Tapa del disco The Wall">
+          <img class="show-only-on-large" src="images/discography/albums/the_wall.jpg" alt="Tapa del disco The Wall">
+          <img class="show-only-on-medium" src="images/discography/albums/the_wall_medium.jpg" alt="Tapa del disco The Wall">
+          <img class="show-only-on-small" src="images/discography/albums/the_wall_small.jpg" alt="Tapa del disco The Wall">
           <div>
             <h3>The Wall</h3>
             <p>1979 - Rock Progresivo</p>
@@ -78,7 +102,8 @@
     <section id="discography-album-description">
       <div id="ummaguma" class="tabs-content">
         <div class="cover">
-          <img src="images/discography/albums/ummaguma.jpg" alt="Tapa del disco Ummaguma">
+          <img class="hide-on-medium" src="images/discography/albums/ummaguma.jpg" alt="Tapa del disco Ummaguma">
+          <img class="show-only-on-medium" src="images/discography/albums/ummaguma_medium.jpg" alt="Tapa del disco Ummaguma">
           <article>
             <h2 class="hidden">Sobre Ummagumma</h2>
             <p><b>Ummagumma</b> es el cuarto álbum de estudio y segundo disco conceptual de la banda británica Pink Floyd, un álbum doble. El primero es un disco en directo, y el segundo es un disco en estudio, en el que cada integrante compuso un tema solista. El título del disco proviene supuestamente de una palabra utilizada por estudiantes en Cambridge que significa "tener sexo".</p>
@@ -110,7 +135,8 @@
       </div>
       <div id="the_dark_side_of_the_moon" class="tabs-content">
         <div class="cover">
-          <img src="images/discography/albums/the_dark_side_of_the_moon.jpg" alt="Tapa del disco The Dark Side of The Moon">
+          <img class="hide-on-medium" src="images/discography/albums/the_dark_side_of_the_moon.jpg" alt="Tapa del disco The Dark Side of The Moon">
+          <img class="show-only-on-medium" src="images/discography/albums/the_dark_side_of_the_moon_medium.jpg" alt="Tapa del disco The Dark Side of The Moon">
           <article>
             <h2 class="hidden">Sobre The Dark Side of the Moon</h2>
             <p><b><span lang="en" title="El lado oscuro de la luna">The Dark Side of the Moon</span></b> es el octavo álbum de estudio del grupo musical británico de rock progresivo Pink Floyd. Salió a la venta el 1 de marzo de 1973 en los Estados Unidos y el 23 de marzo del mismo año en el Reino Unido. Se estima que el álbum ha vendido más de 50 millones de copias a nivel mundial.</p>
@@ -136,7 +162,8 @@
       </div>
       <div id="wish_you_were_here" class="tabs-content">
         <div class="cover">
-          <img src="images/discography/albums/wish_you_were_here.jpg" alt="Tapa del disco Wish You Were Here">
+          <img class="hide-on-medium" src="images/discography/albums/wish_you_were_here.jpg" alt="Tapa del disco Wish You Were Here">
+          <img class="show-only-on-medium" src="images/discography/albums/wish_you_were_here_medium.jpg" alt="Tapa del disco Wish You Were Here">
           <article>
             <h2 class="hidden">Sobre Wish You Were Here</h2>
             <p><b><span lang="en" title="Ojalá estuvieras aquí">Wish You Were Here</span></b> es el noveno álbum de estudio de la banda británica de rock Pink Floyd, lanzado en septiembre de 1975 e inspirado en el material que compusieron durante su gira europea de 1974 y que grabaron en los Abbey Road Studios de Londres. Su temática explora la ausencia, la industria musical y los problemas mentales del anterior miembro de la banda Syd Barrett. Las sesiones de grabación fueron arduas y complicadas, en parte por la idea de Roger Waters de dividir la canción «Shine On You Crazy Diamond» en dos, para después unir cada mitad con tres nuevas composiciones. «Shine On» es un tributo a Barrett, quien, irónicamente, se presentó en los estudios el 5 de junio mientras se grababa. A la banda le costó reconocerle debido a su sobrepeso y a su cambio de aspecto.</p>
@@ -157,7 +184,8 @@
       </div>
       <div id="animals" class="tabs-content">
         <div class="cover">
-          <img src="images/discography/albums/animals.jpg" alt="Tapa del disco Animals">
+          <img class="hide-on-medium" src="images/discography/albums/animals.jpg" alt="Tapa del disco Animals">
+          <img class="show-only-on-medium" src="images/discography/albums/animals_medium.jpg" alt="Tapa del disco Animals">
           <article>
             <h2 class="hidden">Sobre Animals</h2>
             <p><b><span lang="en" title="Animales">Animals</span></b> es el décimo álbum de estudio de la banda británica de rock progresivo Pink Floyd, lanzado al mercado en enero de 1977 a través de Harvest/EMI en el Reino Unido y de Columbia Records en Estados Unidos. Es un álbum conceptual que critica de forma mordaz las condiciones sociopolíticas de Inglaterra y la decadencia del mundo industrializado de la década de 1970. El disco supone además un cambio en el estilo musical respecto a su anterior trabajo, Wish You Were Here.</p>
@@ -178,7 +206,8 @@
       </div>
       <div id="the_wall" class="tabs-content">
         <div class="cover">
-          <img src="images/discography/albums/the_wall.jpg" alt="Tapa del disco The Wall">
+          <img class="hide-on-medium" src="images/discography/albums/the_wall.jpg" alt="Tapa del disco The Wall">
+          <img class="show-only-on-medium" src="images/discography/albums/the_wall_medium.jpg" alt="Tapa del disco The Wall">
           <article>
             <h2 class="hidden">Sobre The Wall</h2>
             <p><b><span class="El muro">The Wall</span></b> es el undécimo álbum de estudio del grupo musical británica de rock progresivo Pink Floyd y el segundo doble, se lanzó al mercado en noviembre de 1979 en el Reino Unido y en enero de 1980 en Estados Unidos. Se grabó entre abril y noviembre bajo la dirección del productor Bob Ezrin y de los miembros de Pink Floyd David Gilmour y Roger Waters.</p>
@@ -231,7 +260,7 @@
               <input type="email" name="email" id="email" placeholder="Correo electrónico">
             </div>
             <div>
-              <input id="subscribe" class="btn" type="submit" name="subscribe">
+              <input id="subscribe" class="btn" type="submit" name="subscribe" value="Suscribirme">
             </div>
           </form>
         </div>
@@ -242,10 +271,9 @@
       <div class="footer-nav">
         <h3 class="footer-title">Links del sitio</h3>
         <ul>
-          <li><a href="index.html#shop">Tienda</a></li>
-          <li><a href="#">Discografía</a></li>
-          <li><a href="index.html#tour">Tour</a></li>
-          <li><a href="index.html#history">Historia</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discography.html">Discografía</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -278,15 +306,32 @@
       </div>
     </div>
     <div class="tp-info">
-      <div>
-        <h3 class="hidden">Datos del alumno y la materia</h3>
-        <p>Desarrollo por <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Cesar Ezequiel Romero</a> para la materia Maquetado y Desarrollo Web a cargo de la docente <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Mabel Garcia</a>.</p>
-        <p>TP2 Primer Cuatrimestre · Escuela Da Vinci 2023</p>
-      </div>
+      <ul>
+        <li class="hidden"><h3>Datos del alumno y la materia</h3></li>
+        <li>Diseño y Desarrollo por <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Cesar Ezequiel Romero</a></li>
+        <li>Docente <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Mabel Garcia</a></li>
+        <li>Trabajo Final Maquetado y Desarrollo Web</li>
+        <li>Primer Cuatrimestre</li>
+        <li>Escuela Da Vinci 2023</li>
+      </ul>
     </div>
   </footer>
   <script>
     document.getElementById('subscribe').addEventListener('click',(event)=>{event.preventDefault()})
+
+    function toggleMenu() {
+      let mobileNav = document.getElementById("mobile-nav");
+      let menuIcon = document.getElementById("menu-icon");
+      if (mobileNav.style.display === "block") {
+        mobileNav.style.display = "none";
+        menuIcon.classList.remove('fa-xmark')
+        menuIcon.classList.add('fa-bars')
+      } else {
+        mobileNav.style.display = "block";
+        menuIcon.classList.remove('fa-bars')
+        menuIcon.classList.add('fa-xmark')
+      }
+    }
   </script>
   <script src="js/index.js"></script>
 </body>
