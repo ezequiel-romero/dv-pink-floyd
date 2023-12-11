@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <title>Pink Floyd | Sorteo Experiencia Pink Floyd</title>
+  <link rel="stylesheet" href="https://use.typekit.net/prx1ifg.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/e0873b9799.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo" title="Logo de Pink Floyd"><h1>Pink Floyd</h1></a>
+    <nav class="desktop-nav">
+      <h2 class="hidden">Menu Desktop</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discography.html">Discografía</a></li>
+        <li><a href="giveaway.html">Sorteo</a></li>
+      </ul>
+    </nav>
+    <div class="social">
+      <h2 class="hidden">Redes sociales</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" class="ig" title="Cuenta de Instagram">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" class="fb" title="Cuenta de Facebook">Facebook</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" class="yt" title="Cuenta de YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu">
+      <nav id="mobile-nav">
+        <h2 class="hidden">Menu Mobile</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discography.html">Discografía</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0);" class="icon" onClick="toggleMenu()">
+        <i id="menu-icon" class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section id="thankyou">
+      <h2>Sorteo Experiencia Pink Floyd</h2>
+      <p>Agradecemos sinceramente tu entusiasmo y participación en nuestro sorteo Experiencia Pink Floyd.</p>
+      <p>Tus datos han sido recibidos con éxito, y queremos confirmarte que ya estás oficialmente inscrito en el sorteo.</p>
+      <p>Estamos emocionados de compartir esta oportunidad única contigo, y te deseamos la mejor de las suertes.</p>
+      <p>¡Que la magia de Pink Floyd esté de tu lado!</p>
+      <p>Mantente atento a futuras actualizaciones. ¡Gracias por ser parte de esta experiencia musical!</p>
+    </section>
+  </main>
+  <footer>
+    <div class="newsletter">
+      <div class="newsletter-box">
+        <h2>Newsletter</h2>
+        <div class="newsletter-form">
+          <p>Sé el primero en recibir <b>ofertas exclusivas</b> y las <b>últimas novedades</b>.</p>
+          <form>
+            <div class="field">
+              <input type="email" name="email" id="email" placeholder="Correo electrónico">
+            </div>
+            <div>
+              <input id="subscribe" class="btn" type="submit" name="subscribe" value="Suscribirme">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info">
+      <h2 class="hidden">Footer</h2>
+      <div class="footer-nav">
+        <h3 class="footer-title">Links del sitio</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discography.html">Discografía</a></li>
+          <li><a href="giveaway.html">Sorteo</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3 class="footer-title">Redes</h3>
+        <ul class="footer-icons">
+          <li><a class="ig" target="_blank" href="https://www.instagram.com">Instagram</a></li>
+          <li><a class="sp" target="_blank" href="https://www.spotify.com">Spotify</a></li>
+          <li><a class="am" target="_blank" href="https://music.apple.com/">Apple Music</a></li>
+          <li><a class="yt" target="_blank" href="https://www.youtube.com">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <ul>
+          <li><a class="phone" href="tel:+5491123456789" target="_blank">+54 91123456789</a></li>
+          <li><a class="email" href="mailto:pink@floyd.com" target="_blank">pink@floyd.com</a></li>
+          <li><a class="location" href="#" target="_blank">London, England</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div>
+        <p>© 2023 Pink Floyd. Todos los derechos reservados.</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Políticas de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tp-info">
+      <ul>
+        <li class="hidden"><h3>Datos del alumno y la materia</h3></li>
+        <li>Diseño y Desarrollo por <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Cesar Ezequiel Romero</a></li>
+        <li>Docente <a target="_blank" href="mailto:cesar.romero@davinci.edu.ar">Mabel Garcia</a></li>
+        <li>Trabajo Final Maquetado y Desarrollo Web</li>
+        <li>Primer Cuatrimestre</li>
+        <li>Escuela Da Vinci 2023</li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('subscribe').addEventListener('click',(event)=>{event.preventDefault()})
+
+    function toggleMenu() {
+      let mobileNav = document.getElementById("mobile-nav");
+      let menuIcon = document.getElementById("menu-icon");
+      if (mobileNav.style.display === "block") {
+        mobileNav.style.display = "none";
+        menuIcon.classList.remove('fa-xmark')
+        menuIcon.classList.add('fa-bars')
+      } else {
+        mobileNav.style.display = "block";
+        menuIcon.classList.remove('fa-bars')
+        menuIcon.classList.add('fa-xmark')
+      }
+    }
+  </script>
+  <script src="js/index.js"></script>
+</body>
+</html>
