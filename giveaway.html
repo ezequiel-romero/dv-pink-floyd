@@ -53,53 +53,53 @@
       <form class="giveaway-form" action="thankyou.html" enctype="multipart/form-data">
         <div>
           <label for="firstname">Nombre <span class="required">*</span></label>
-          <input type="text" name="firstname" placeholder="Juan" autofocus required>
+          <input type="text" id="firstname" name="firstname" placeholder="Juan" autofocus required>
         </div>
         <div>
           <label for="lastname">Apellido <span class="required">*</span></label>
-          <input type="text" name="lastname" placeholder="Doe" required>
+          <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
         </div>
         <div>
           <label for="email">Email <span class="required">*</span></label>
-          <input type="email" name="email" placeholder="email@ejemplo.com" required>
+          <input type="email" id="email" name="email" placeholder="email@ejemplo.com" required>
         </div>
         <div>
           <label for="birth">Fecha de nacimiento <span class="required">*</span></label>
-          <input type="date" name="birth" required>
+          <input type="date" id="birth" name="birth" required>
           <span class="disclaimer">El participante deberá ser mayor de 18 años</span>
         </div>
         <div>
           <label for="picture">Sube tu foto <span class="required">*</span></label>
-          <input type="file" name="picture" accept="image/jpeg, image/png" required>
+          <input type="file" id="picture" name="picture" accept="image/jpeg, image/png" required>
         </div>
         <div>
-          <label for="rrss">¿Cómo te has enterado del sorteo?</label>
-          <div class="checkbox-container">
-            <label>
+          <label>¿Cómo te has enterado del sorteo?</label>
+          <fieldset class="checkbox-container">
+            <label for="facebook">
               Facebook
-              <input type="checkbox" name="rrss" value="facebook">
+              <input type="checkbox" id="facebook" name="rrss" value="facebook">
             </label>
-            <label>
+            <label for="instagram">
               Instagram
-              <input type="checkbox" name="rrss" value="instagram">
+              <input type="checkbox" id="instagram" name="rrss" value="instagram">
             </label>
-            <label>
+            <label for="twitter">
               Twitter
-              <input type="checkbox" name="rrss" value="twitter">
+              <input type="checkbox" id="twitter" name="rrss" value="twitter">
             </label>
-            <label>
+            <label for="tiktok">
               Tik Tok
-              <input type="checkbox" name="rrss" value="tiktok">
+              <input type="checkbox" id="tiktok" name="rrss" value="tiktok">
             </label>
-            <label>
+            <label for="web">
               Pink Floyd Web
-              <input type="checkbox" name="rrss" value="web">
+              <input type="checkbox" id="web" name="rrss" value="web">
             </label>
-            <label>
+            <label for="otro">
               Otro
-              <input type="checkbox" name="rrss" value="otro">
+              <input type="checkbox" id="otro" name="rrss" value="otro">
             </label>
-          </div>
+          </fieldset>
         </div>
         <div class="submit">
           <input type="submit" name="submit" value="Enviar">
@@ -115,7 +115,7 @@
           <p>Sé el primero en recibir <b>ofertas exclusivas</b> y las <b>últimas novedades</b>.</p>
           <form>
             <div class="field">
-              <input type="email" name="email" id="email" placeholder="Correo electrónico">
+              <input type="email" name="email" id="email-nl" placeholder="Correo electrónico">
             </div>
             <div>
               <input id="subscribe" class="btn" type="submit" name="subscribe" value="Suscribirme">

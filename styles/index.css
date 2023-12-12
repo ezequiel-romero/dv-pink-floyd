@@ -723,6 +723,7 @@ section .section-copy {
   flex-direction: row;
   gap: 15px;
   padding: 10px 0;
+  border: none;
 }
 
 #thankyou {
